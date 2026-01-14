@@ -1,6 +1,12 @@
 /*
 All the program is in main.go only for now
 The module structure will come later
+*/
+
+/*
+Main Working of Visualizer
+
+Copyright (C) 2026 Aritra Biswas
 
 Author: Aritra Biswas <aritrabb@gmail.com>
 */

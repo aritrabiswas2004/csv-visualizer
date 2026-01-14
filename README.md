@@ -46,3 +46,5 @@ below. It resembles terminal output like MySQL.
 | Christ The Redeemer | Rio de Janeiro | 400  | 100.22    | great    |
 +---------------------+----------------+------+-----------+----------+
 ```
+
+_Copyright (C) 2026 [Aritra Biswas](mailto:aritrabb@gmail.com)_
