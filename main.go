@@ -1,3 +1,10 @@
+/*
+All the program is in main.go only for now
+The module structure will come later
+
+Author: Aritra Biswas <aritrabb@gmail.com>
+*/
+
 package main
 
 import (
@@ -74,7 +81,6 @@ func getDataHeadersAndMaxWidths(lines []string) ([]string, []int, error) {
 	for _, v := range lines {
 		row := cleanCSVRow(strings.Split(v, ","))
 
-		// Taj Mahal, Agra, 299, 10.4
 		for idx, val := range row {
 			maxColumnWidths[idx] = max(maxColumnWidths[idx], len(val))
 		}
