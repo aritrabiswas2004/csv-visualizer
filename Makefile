@@ -1,8 +1,10 @@
+.PHONY: build test clean
+
 build:main.go
 	go build -o viz main.go
 
 test:
-	go test -v
+	go test -v ./test
 
 clean:
 	rm -rf viz

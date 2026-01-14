@@ -15,7 +15,10 @@ Build the executable in current directory with
 make build
 ```
 
-Test all available tests with
+Test all available tests with. It basically runs all test files in the `test/`
+directory. But remember...real devs test in production. And users are just advanced
+testers.
+
 ```shell
 make test
 ```
