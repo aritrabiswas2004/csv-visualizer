@@ -99,13 +99,8 @@ func getDataHeadersAndMaxWidths(lines []string) ([]string, []int, error) {
 	return headers, maxColumnWidths, nil
 }
 
-func main() {
-	data, err := os.ReadFile("test.csv")
-	if err != nil {
-		panic(err)
-	}
-
-	lines := strings.Split(string(data), "\n")
+func printTerminalTable(data string) {
+	lines := strings.Split(data, "\n")
 
 	headers, headerLengths, err := getDataHeadersAndMaxWidths(lines)
 	if err != nil {
@@ -130,4 +125,13 @@ func main() {
 
 	// bottom border
 	fmt.Println(sliceToDashString(headerLengths))
+}
+
+func main() {
+	data, err := os.ReadFile("test.csv")
+	if err != nil {
+		panic(err)
+	}
+
+	printTerminalTable(string(data))
 }

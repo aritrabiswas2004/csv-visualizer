@@ -1,7 +1,7 @@
 // Placeholder Test Functions only
 // Correct Test functions to be added later
 
-package test
+package tests
 
 import (
 	"strings"
