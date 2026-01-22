@@ -1,5 +1,9 @@
+# IDE dirs
 /.idea/
 /.vscode/
+
+# Dirs not required (txt for testfiles)
 *.txt
 *.iml
 viz*
+*.patch
