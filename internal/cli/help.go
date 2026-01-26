@@ -13,7 +13,7 @@ package cli
 const HelpMessage = `CSV Visualizer for the ANSI terminal - v0.0.2
 
 USAGE:
-  viz [OPTIONS] [FILENAME]
+  viz [OPTIONS] FILE
 
 OPTIONS:
   -h, --help    	Print this help message

@@ -5,9 +5,6 @@ Renders a MySQL-like dynamic terminal table but for CSV files.
 Great for tables ASCII-only notes, or just a lightweight visualizer without a crazy
 GUI program.
 
-> The output at this moment cannot be used as Markdown tables and only ANSI
-terminal compatible. 
-
 Good code standards are a myth; code works fine if it works at all.
 
 ## Installation
@@ -36,7 +33,7 @@ Build the executable in current directory with
 make build
 ```
 
-Test all available tests with. It basically runs all test files in the `test/`
+Test all available tests with. It basically runs all test files in the `internal/`
 directory. But remember...real devs test in production. And users are just advanced
 testers.
 
@@ -54,18 +51,6 @@ A `test.csv` is given for your convenience in the repo for testing.
 
 ## Terminal Output
 
-Given an ANSI standard terminal (basically anything except Windows) an output can be like
-below. It resembles terminal output like MySQL.
-
-```text
-+---------------------+----------------+------+-----------+----------+
-| Name                | Location       | Age  | Elevation | Good     |
-+---------------------+----------------+------+-----------+----------+
-| Taj Mahal           | Agra           | 500  | 40.56     | yes      |
-| Pyramids of Giza    | Giza           | 4000 | 46.77     | no       |
-| Colosseum           | Rome           | 5000 | 10.02     | bearable |
-| Christ The Redeemer | Rio de Janeiro | 400  | 100.22    | great    |
-+---------------------+----------------+------+-----------+----------+
-```
+See [rendering docs](./documentation/rendering.md)
 
 _Copyright (C) 2026 [Aritra Biswas](mailto:aritrabb@gmail.com)_
