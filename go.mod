@@ -1,4 +1,4 @@
-module visualizer
+module github.com/aritrabiswas2004/csv-visualizer
 
 go 1.25.4
 

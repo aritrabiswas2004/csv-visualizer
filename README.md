@@ -1,8 +1,12 @@
 # CSV Visualizer
 
-Visualize CSV files in the terminal. Written in Go.
+Renders a MySQL-like dynamic terminal table but for CSV files. 
 
-Right now reads the default `test.csv` (but it can work with any CSV file)
+Great for tables ASCII-only notes, or just a lightweight visualizer without a crazy
+GUI program.
+
+> The output at this moment cannot be used as Markdown tables and only ANSI
+terminal compatible. 
 
 Good code standards are a myth; code works fine if it works at all.
 
@@ -23,16 +27,13 @@ testers.
 make test
 ```
 
-(Possible soon deprecation) Run with no perma-executable
-```shell
-make run
-```
-
 And cleanup with
 
 ```shell
 make clean
 ```
+
+A `test.csv` is given for your convenience in the repo for testing.
 
 ## Terminal Output
 

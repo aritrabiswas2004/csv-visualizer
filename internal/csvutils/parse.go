@@ -1,5 +1,5 @@
 /************* SPDX License Identifier: MIT ************
- * Visualizer - Main source file for the Visualizer
+ * Visualizer - Utils and helpers related to CSV
  *
  * Copyright (C) 2026 Aritra Biswas
  *
@@ -8,21 +8,14 @@
  * NOTE: The git commits are not tied to this email.
 ********************************************************/
 
-package main
+package csvutils
 
-import (
-	"log"
-	"os"
+import "strings"
 
-	"github.com/aritrabiswas2004/csv-visualizer/internal/cli"
-)
-
-func main() {
-	log.SetPrefix("viz: ")
-	log.SetFlags(0)
-
-	err := cli.Run(os.Args)
-	if err != nil {
-		log.Fatalln(err)
+func CleanRow(row []string) []string {
+	out := make([]string, 0, len(row))
+	for _, v := range row {
+		out = append(out, strings.ReplaceAll(v, `"`, ""))
 	}
+	return out
 }
