@@ -33,5 +33,26 @@ func Run(args []string) error {
 		return err
 	}
 
-	return table.Print(string(data))
+	if opts.Markdown {
+		err := table.PrintMarkdown(string(data))
+		if err != nil {
+			return err
+		}
+	}
+
+	if opts.Text {
+		err := table.Print(string(data))
+		if err != nil {
+			return err
+		}
+	}
+
+	if opts.Export.filename != "" {
+		err := ExportFile(opts.Export.filename, data)
+		if err != nil {
+			return err
+		}
+	}
+
+	return nil
 }
