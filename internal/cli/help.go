@@ -10,16 +10,22 @@
 
 package cli
 
-const HelpMessage = `CSV Visualizer for the ANSI terminal - v0.0.1
+const HelpMessage = `CSV Visualizer for the ANSI terminal - v0.0.2
 
 USAGE:
-  viz [OPTIONS] file.csv
+  viz [OPTIONS] [FILENAME]
 
 OPTIONS:
-  -h, --help    Print this help message
+  -h, --help    	Print this help message
 
-Check the up-to-date development information on the Mailing List.
-All are welcome to contribute.
+  -m, --markdown	Display in markdown table format
+  -t, --text		Display in text format (default)
 
-Mirror repository: https://github.com/aritrabiswas2004/csv-visualizer
-Development Mailing List: https://groups.google.com/g/csv-coreutils-dev`
+     --export=FILE	Export to filename provided (markdown, text)
+
+INFORMATION:
+	Check the up-to-date development information on the Mailing List.
+	All are welcome to contribute.
+	
+	Mirror repository: https://github.com/aritrabiswas2004/csv-visualizer
+	Development Mailing List: https://groups.google.com/g/csv-coreutils-dev`

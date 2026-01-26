@@ -121,3 +121,35 @@ func Print(data string) error {
 
 	return nil
 }
+
+func ReturnText(data string) (string, error) {
+	lines := strings.Split(strings.TrimSpace(data), "\n")
+
+	headers, headerLengths, err := getDataHeadersAndMaxWidths(lines)
+	if err != nil {
+		return "", err
+	}
+
+	tableString := strings.Builder{}
+
+	// top
+	tableString.WriteString(fmt.Sprintf("%s\n", sliceToDashString(headerLengths)))
+
+	// headers
+	tableString.WriteString(fmt.Sprintf("%s\n", itemSliceToDashString(headers, headerLengths)))
+
+	// sep
+	tableString.WriteString(fmt.Sprintf("%s\n", sliceToDashString(headerLengths)))
+
+	for _, v := range lines[1:] {
+		row := csvutils.CleanRow(strings.Split(v, ","))
+
+		// data item
+		tableString.WriteString(fmt.Sprintf("%s\n", itemSliceToDashString(row, headerLengths)))
+	}
+
+	// end
+	tableString.WriteString(fmt.Sprintf("%s\n", sliceToDashString(headerLengths)))
+
+	return tableString.String(), err
+}
