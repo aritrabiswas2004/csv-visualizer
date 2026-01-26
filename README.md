@@ -10,6 +10,23 @@ terminal compatible.
 
 Good code standards are a myth; code works fine if it works at all.
 
+## Installation
+
+> [!NOTE]
+> As of now the install script does not move the binary
+> to `/usr/bin` or `/usr/local` so you have to be in the
+> directory to run the program. This is subjected to change
+> on first stable release.
+
+Get the required files using `git` and then build using
+`make`. Run the installation script for latest build.
+
+```shell
+./install-git.sh
+```
+
+The script does require `git` and `make` to be installed.
+
 ## Build Instructions
 
 Check `Makefile` comments before running anything. Uses Go version `1.25.4`.
