@@ -50,5 +50,30 @@ func ExportFile(fileName string, data []byte) error {
 		return err
 	}
 
-	return os.WriteFile(fileName, []byte(result), 0666)
+	return appendOrCreateFile(fileName, result)
+}
+
+// Adds double newline for better looks
+// Come at me if you think this sucks
+func appendOrCreateFile(filename string, data string) error {
+	filePtr, err := os.OpenFile(filename, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
+	if err != nil {
+		_ = filePtr.Close()
+		return err
+	}
+
+	bytes, writeErr := filePtr.Write([]byte("\n" + data))
+	if writeErr != nil {
+		_ = filePtr.Close()
+		return writeErr
+	}
+
+	fmt.Printf("Wrote %d bytes to %s\n", bytes, filename)
+
+	closeErr := filePtr.Close()
+	if closeErr != nil {
+		return closeErr
+	}
+
+	return nil
 }
