@@ -1,12 +1,12 @@
 #!/bin/bash
 
 OS=$(uname | tr '[:upper:]' '[:lower:]')
-ARCH=$(uname -m)
+ARCH=$(uname -r | sed 's/.*-\(.*\)/\1/')
 
-curl -LO https://github.com/you/csvview/releases/latest/download/csvview-$OS-$ARCH
-chmod +x csvview-$OS-$ARCH
+curl -LO https://github.com/aritrabiswas2004/csv-visualizer/releases/latest/download/viz-$OS-$ARCH
+chmod +x viz-$OS-$ARCH
 
-echo "Done."
+echo "Binary downloaded."
 
 # give usr instructions
 
