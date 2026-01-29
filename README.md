@@ -23,7 +23,6 @@ $ ./viz test.csv
 | Christ The Redeemer | Rio de Janeiro | 400  | 100.22    | great    |
 | Machu Picchu        | Peru           | 1000 | 1932.22   | nice     |
 +---------------------+----------------+------+-----------+----------+
-
 ```
 
 Check out further information in [rendering docs.](./documentation/rendering.md)

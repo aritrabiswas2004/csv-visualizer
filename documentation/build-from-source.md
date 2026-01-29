@@ -20,7 +20,7 @@ make build
 
 ### Installation
 
-Check if installation works correct and the [instructions for it] are
+Check if installation works correct and the [instructions for it](../README.md#installation) are
 also correct. Executes `install.sh` shell script.
 
 ```shell
