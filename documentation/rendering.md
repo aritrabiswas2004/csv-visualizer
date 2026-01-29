@@ -17,7 +17,7 @@ text being the MySQL-like output that is described everywhere.
 +---------------------+----------------+------+-----------+----------+
 ```
 
-2. **Markdown Rendering**: Renders into tables that markdown accepts. LaTeX compatibility has not been implemented (or even beta tested).
+2. **Markdown Rendering**: Renders into tables that markdown accepts. LaTeX compatibility is possibly coming soon.
 
 ```text
 | Name                | Location       | Age  | Elevation | Good     |
