@@ -1,0 +1,12 @@
+.gitignore
+Makefile
+LICENSE
+
+documentation/
+scripts/
+.idea/
+patch/
+
+*.md
+*.txt
+*.csv
