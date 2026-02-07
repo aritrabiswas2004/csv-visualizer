@@ -3,9 +3,8 @@
  *
  * Copyright (C) 2026 Aritra Biswas
  *
- * Author: Aritra Biswas <aritra.biswas@ru.nl>
+ * Author: Aritra Biswas <aritrabb@gmail.com>
  *
- * NOTE: The git commits are not tied to this email.
 ********************************************************/
 
 package cli
@@ -53,8 +52,8 @@ func ExportFile(fileName string, data []byte) error {
 	return appendOrCreateFile(fileName, result)
 }
 
-// Adds double newline for better looks
-// Come at me if you think this sucks
+// Adds single newline for better looks
+// Let me know if you think this sucks, and I will gladly ignore you
 func appendOrCreateFile(filename string, data string) error {
 	filePtr, err := os.OpenFile(filename, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0666)
 	if err != nil {

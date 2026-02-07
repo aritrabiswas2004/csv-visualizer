@@ -1,3 +1,12 @@
+/************* SPDX License Identifier: MIT ************
+ * Visualizer - Render markdown compatible dynamic table
+ *
+ * Copyright (C) 2026 Aritra Biswas
+ *
+ * Author: Aritra Biswas <aritrabb@gmail.com>
+ *
+********************************************************/
+
 package table
 
 import (

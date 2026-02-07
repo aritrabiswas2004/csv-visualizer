@@ -3,9 +3,8 @@
  *
  * Copyright (C) 2026 Aritra Biswas
  *
- * Author: Aritra Biswas <aritra.biswas@ru.nl>
+ * Author: Aritra Biswas <aritrabb@gmail.com>
  *
- * NOTE: The git commits are not tied to this email.
 ********************************************************/
 
 package cli
