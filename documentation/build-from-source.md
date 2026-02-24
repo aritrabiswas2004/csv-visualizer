@@ -39,8 +39,13 @@ make test
 
 ### Cleanup
 
-Remove any binary (or file, so beware) matching
-regexp pattern `viz*`
+Remove any file matching the
+regexp pattern `viz*` or Go RegExp `viz.*`. Made for clean up after compiling multiple
+binaries.
+
+> [!WARNING]
+> Do NOT name any important file containing the pattern `viz` in the filename. If you do
+> this command will delete it and banish you to the kingdom of viz.
 
 ```shell
 make clean

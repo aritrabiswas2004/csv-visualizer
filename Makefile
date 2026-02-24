@@ -12,16 +12,21 @@ test:
 
 clean:
 	rm -rf viz*
+    rm -rf binary/viz*
 
 # Use if you are using POSIX compliant shell
 static-binary:
 	GOOS=$(OS) GOARCH=$(ARCH) go build -o viz-$(OS)-$(ARCH)
 
 all-static-bin:
-	GOOS=linux GOARCH=amd64 go build -o viz-linux-amd64
-	GOOS=darwin GOARCH=amd64 go build -o viz-darwin-amd64
-	GOOS=darwin GOARCH=arm64 go build -o viz-darwin-arm64
-	GOOS=windows GOARCH=amd64 go build -o viz-windows-amd64.exe
+	GOOS=linux GOARCH=amd64 go build -o binary/viz-linux-amd64
+	GOOS=linux GOARCH=arm64 go build -o binary/viz-linux-arm64
+
+	GOOS=darwin GOARCH=amd64 go build -o binary/viz-darwin-amd64
+	GOOS=darwin GOARCH=arm64 go build -o binary/viz-darwin-arm64
+
+	GOOS=windows GOARCH=amd64 go build -o binary/viz-windows-amd64.exe
+	GOOS=windows GOARCH=amd64 go build -o binary/viz-windows-amd64.exe
 
 install:
 	./scripts/install.sh

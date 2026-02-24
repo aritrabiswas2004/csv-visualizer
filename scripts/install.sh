@@ -1,10 +1,17 @@
 #!/bin/bash
 
+set -e
+
 OS=$(uname | tr '[:upper:]' '[:lower:]')
 ARCH=$(uname -r | sed 's/.*-\(.*\)/\1/')
 
-curl -LO https://github.com/aritrabiswas2004/csv-visualizer/releases/latest/download/viz-$OS-$ARCH
-chmod +x viz-$OS-$ARCH
+if [[ $OS -eq "WSL2" ]]; then
+  curl -LO https://github.com/aritrabiswas2004/csv-visualizer/releases/latest/download/viz-linux-$ARCH
+  chmod +x viz-$OS-$ARCH
+else
+  curl -LO https://github.com/aritrabiswas2004/csv-visualizer/releases/latest/download/viz-$OS-$ARCH
+  chmod +x viz-$OS-$ARCH
+fi
 
 echo "Binary successfully downloaded."
 

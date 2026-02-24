@@ -2,6 +2,7 @@
 /.idea/
 /.vscode/
 /patch/
+/binary/
 
 # Dirs not required (txt for testfiles)
 *.txt
