@@ -26,7 +26,7 @@ all-static-bin:
 	GOOS=darwin GOARCH=arm64 go build -o binary/viz-darwin-arm64
 
 	GOOS=windows GOARCH=amd64 go build -o binary/viz-windows-amd64.exe
-	GOOS=windows GOARCH=amd64 go build -o binary/viz-windows-amd64.exe
+	GOOS=windows GOARCH=arm64 go build -o binary/viz-windows-arm64.exe
 
 install:
 	./scripts/install.sh
