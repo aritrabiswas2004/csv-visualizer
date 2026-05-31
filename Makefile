@@ -12,7 +12,7 @@ test:
 
 clean:
 	rm -rf viz*
-    rm -rf binary/viz*
+	rm -rf binary/viz*
 
 # Use if you are using POSIX compliant shell
 static-binary:
