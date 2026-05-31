@@ -23,7 +23,7 @@ BINARY="viz-$OS-$ARCH"
 curl -LO https://github.com/aritrabiswas2004/csv-visualizer/releases/latest/download/$BINARY
 chmod +x $BINARY
 
-echo "Binary successfully as $BINARY"
+echo "Binary installed successfully as $BINARY"
 
 # /usr/local/bin or /usr/bin makes it difficult anyways to remove, and we don't
 # even have a script for uninstall yet (not that it is required; this software

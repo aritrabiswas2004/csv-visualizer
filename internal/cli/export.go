@@ -28,7 +28,7 @@ type ExportPackage struct {
 	encoding int
 }
 
-func ExportFile(fileName string, data []byte) error {
+func ExportFile(fileName string, data []byte, requireUnicode bool) error {
 	fmt.Printf("Exporting to %v...\n", fileName)
 
 	var (
@@ -40,7 +40,11 @@ func ExportFile(fileName string, data []byte) error {
 	case strings.HasSuffix(fileName, ".md"):
 		result, err = table.ReturnMarkdown(string(data))
 	case strings.HasSuffix(fileName, ".txt"):
-		result, err = table.ReturnText(string(data))
+		if !requireUnicode {
+			result, err = table.ReturnText(string(data))
+		} else {
+			result, err = table.ReturnUnicode(string(data))
+		}
 	default:
 		return fmt.Errorf("unsupported filetype for %s", fileName)
 	}

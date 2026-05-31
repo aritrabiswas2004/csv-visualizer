@@ -29,9 +29,15 @@ Check out further information in [rendering docs.](./documentation/rendering.md)
 
 ## Installation
 
-The easiest way is to check the [latest releases](https://github.com/aritrabiswas2004/csv-visualizer/releases) and download a binary
+The easiest way to install is with the command below
+
+```shell
+curl -fsSL https://raw.githubusercontent.com/aritrabiswas2004/csv-visualizer/main/install.sh | bash
+```
+
+Alternatively, you can check the [latest releases](https://github.com/aritrabiswas2004/csv-visualizer/releases) and download a binary
 pertaining to your operating system and processor
-architecture.
+architecture. This is recommended for Windows/PowerShell users.
 
 If you are planning to build from source, check out
 the [building from source](./documentation/build-from-source.md) documentation.
@@ -40,12 +46,12 @@ You can also install with any of the installation scripts
 in the [`scripts/`](./scripts) directory.
 
 - [`install.sh`](./scripts/install.sh) is the general installation
-script for all UNIX-based systems. This fetches the latest binary
+script for all UNIX-based systems. Requires `curl`. This fetches the latest binary
 from the latest release automatically.
 
 - [`install-git.sh`](./scripts/install-git.sh) requires you to
 have `git`, `make` and `go` version `1.25.4` installed. It is
-intended for installation checks during development. So unless
+intended for developers building from source. So unless
 you know what you are doing, this is not the way to install.
 
 > [!NOTE]

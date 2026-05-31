@@ -8,6 +8,8 @@
   - Prints a general text (MySQL-like) table on standard output. This is enabled by default.
 - `-m` or `--markdown`
   - Prints a markdown ASCII table to stdout.
+- `-u` or `--unicode`
+  - Prints the unicode-character borders of the table
 - `--export=FILENAME`
   - Exports the CSV table and rendered ASCII version to a file with any name. The extensions must be `.txt` or `.md` and
   any other will throw an error.

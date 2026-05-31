@@ -39,6 +39,15 @@ func Run(args []string) error {
 		}
 	}
 
+	if opts.Unicode {
+		if opts.Export.filename == "" {
+			err := table.PrintUnicode(string(data))
+			if err != nil {
+				return err
+			}
+		}
+	}
+
 	if opts.Text {
 		err := table.Print(string(data))
 		if err != nil {
@@ -47,7 +56,7 @@ func Run(args []string) error {
 	}
 
 	if opts.Export.filename != "" {
-		err := ExportFile(opts.Export.filename, data)
+		err := ExportFile(opts.Export.filename, data, opts.Unicode)
 		if err != nil {
 			return err
 		}

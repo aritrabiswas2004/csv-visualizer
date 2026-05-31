@@ -17,7 +17,7 @@ text being the MySQL-like output that is described everywhere.
 +---------------------+----------------+------+-----------+----------+
 ```
 
-2. **Markdown Rendering**: Renders into tables that markdown accepts. LaTeX compatibility is possibly coming soon.
+2. **Markdown Rendering**: Renders into tables that markdown accepts.
 
 ```text
 | Name                | Location       | Age  | Elevation | Good     |
@@ -27,4 +27,19 @@ text being the MySQL-like output that is described everywhere.
 | Colosseum           | Rome           | 5000 | 10.02     | bearable |
 | Christ The Redeemer | Rio de Janeiro | 400  | 100.22    | great    |
 | Machu Picchu        | Peru           | 1000 | 1932.22   | nice     |
+```
+
+3. **Unicode Rendering**: Renders with unicode characters for the borders instead of
+just regular ASCII characters.
+
+```text
+╭─────────────────────┬────────────────┬──────┬───────────┬──────────╮
+│ Name                │ Location       │ Age  │ Elevation │ Good     │
+├─────────────────────┼────────────────┼──────┼───────────┼──────────┤
+│ Taj Mahal           │ Agra           │ 500  │ 40.56     │ yes      │
+│ Pyramids of Giza    │ Giza           │ 4000 │ 46.77     │ no       │
+│ Colosseum           │ Rome           │ 5000 │ 10.02     │ bearable │
+│ Christ The Redeemer │ Rio de Janeiro │ 400  │ 100.22    │ great    │
+│ Machu Picchu        │ Peru           │ 1000 │ 1932.22   │ nice     │
+╰─────────────────────┴────────────────┴──────┴───────────┴──────────╯
 ```
