@@ -19,6 +19,7 @@ type Options struct {
 	Help     bool
 	Markdown bool
 	Text     bool
+	Unicode  bool
 	Export   ExportPackage
 }
 
@@ -38,6 +39,9 @@ func ParseArgs(args []string) (Options, error) {
 			opts.Text = false
 		case "-t", "--text":
 			opts.Text = true
+		case "-u", "--unicode":
+			opts.Unicode = true
+			opts.Text = false
 		default:
 			if strings.HasPrefix(arg, "--export=") {
 				opts.Text = false

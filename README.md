@@ -37,7 +37,7 @@ curl -fsSL https://raw.githubusercontent.com/aritrabiswas2004/csv-visualizer/mai
 
 Alternatively, you can check the [latest releases](https://github.com/aritrabiswas2004/csv-visualizer/releases) and download a binary
 pertaining to your operating system and processor
-architecture.
+architecture. This is recommended for Windows/PowerShell users.
 
 If you are planning to build from source, check out
 the [building from source](./documentation/build-from-source.md) documentation.

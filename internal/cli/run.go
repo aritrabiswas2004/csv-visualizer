@@ -39,6 +39,13 @@ func Run(args []string) error {
 		}
 	}
 
+	if opts.Unicode {
+		err := table.PrintUnicode(string(data))
+		if err != nil {
+			return err
+		}
+	}
+
 	if opts.Text {
 		err := table.Print(string(data))
 		if err != nil {
