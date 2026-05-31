@@ -3,7 +3,7 @@ package cli
 import "testing"
 
 func TestExportFile(t *testing.T) {
-	file1Err := ExportFile("failfile.py", []byte("xxx"))
+	file1Err := ExportFile("failfile.py", []byte("xxx"), false)
 	if file1Err == nil {
 		t.Fatalf("invalid format file created")
 	}
