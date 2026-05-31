@@ -9,7 +9,7 @@
 
 package cli
 
-const HelpMessage = `CSV Visualizer for the ANSI terminal - v0.0.2
+const HelpMessage = `CSV Visualizer for the ANSI terminal - v0.0.4
 
 USAGE:
   viz [OPTIONS] FILE
@@ -19,6 +19,7 @@ OPTIONS:
 
   -m, --markdown	Display in markdown table format
   -t, --text		Display in text format (default)
+  -u, --unicode		Display with unicode characters as borders
 
      --export=FILE	Export to filename provided (markdown, text)
 
